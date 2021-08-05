@@ -1,7 +1,4 @@
 import json
-
-from .lib import Is_Int, get_local_time, NLP_JudgeMain
-
 from django.http import JsonResponse
 from django.shortcuts import render
 
@@ -67,7 +64,7 @@ def get_note(request):
     for note_item in note_select:
         Json_text += '\"'
         strtemp=""
-        Json_text += strtemp.join(NLP_JudgeMain(note_item.NOTEDATA)) ########有和谐
+        Json_text += strtemp.join(note_item.NOTEDATA) ########有和谐
         Json_text += '\"'
         current_note_item += 1
         if current_note_item != count_note_item:

@@ -82,25 +82,13 @@ WSGI_APPLICATION = 'TeyvatMap.wsgi.application'
 DATABASES = {
     'default':
         {
-            # Sqlite
-            # 'ENGINE': 'django.db.backends.sqlite3',
-            # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-
-            # MySQL LOCAL
-            # 'ENGINE': 'django.db.backends.mysql',  # 数据库引擎
-            # 'NAME': 'teyvatmap',  # 数据库名称
-            # 'HOST': '127.0.0.1',  # 数据库地址，本机 ip 地址 127.0.0.1
-            # 'PORT': 3306,  # 端口
-            # 'USER': 'root',  # 数据库用户名
-            # 'PASSWORD': '44280729',  # 数据库密码
-
             # MySQL ALIYUN_RDS_MYSQL
             'ENGINE': 'django.db.backends.mysql',  # 数据库引擎
-            'NAME': 'teyvatmap',  # 数据库名称
-            'HOST': 'rm-8vb6bo51o53v4dm4huo.mysql.zhangbei.rds.aliyuncs.com',  # 数据库地址
+            'NAME': 'bucthole',  # 数据库名称
+            'HOST': 'rm-8vb5u33301cnm9r49to.mysql.zhangbei.rds.aliyuncs.com',  # 数据库地址
             'PORT': 3306,  # 端口
-            'USER': 'root',  # 数据库用户名
-            'PASSWORD': 'TeyvatMap2021',  # 数据库密码
+            'USER': 'buctsnc',  # 数据库用户名
+            'PASSWORD': 'BUCTSNC_2021',  # 数据库密码
         }
 }
 
