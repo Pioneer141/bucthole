@@ -1,22 +1,15 @@
 from django.db import models
 
 
-class BLOCK(models.Model):
-    ID = models.IntegerField()
-    LEFT_UP_LNG = models.CharField(max_length=255)
-    LEFT_UP_LAT = models.CharField(max_length=255)
-    RIGHT_UP_LNG = models.CharField(max_length=255)
-    RIGHT_UP_LAT = models.CharField(max_length=255)
-    RIGHT_DOWN_LNG = models.CharField(max_length=255)
-    RIGHT_DOWN_LAT = models.CharField(max_length=255)
-    LEFT_DOWN_LNG = models.CharField(max_length=255)
-    LEFT_DOWN_LAT = models.CharField(max_length=255)
-    CENTER_LNG = models.CharField(max_length=255)
-    CENTER_LAT = models.CharField(max_length=255)
-
-
+class USER(models.Model):
+    UID = models.AutoField(primary_key=True)
+    UNAME = models.CharField(max_length=255)
+    UPASSWORD = models.CharField(max_length=255)
+    UCOOKIESLIST = models.CharField(max_length=255)
+    UROLE = models.CharField(max_length=255)
 
 class NOTE(models.Model):
-    NOTEID = models.AutoField(primary_key=True)
-    BLOCKID = models.IntegerField()
-    NOTEDATA = models.CharField(max_length=255)
+    NID = models.AutoField(primary_key=True)
+    UCOOKIE = models.CharField(max_length=255)
+    TIME = models.CharField(max_length=255)
+    CONTENT = models.CharField(max_length=255)

@@ -2,7 +2,7 @@ import json
 from django.http import JsonResponse
 from django.shortcuts import render
 
-from AnonymousIsland.models import BLOCK
+from AnonymousIsland.models import USER
 from AnonymousIsland.models import NOTE
 
 ###### GLOBAL_VARIABLE
@@ -18,7 +18,7 @@ map_info = {
 
 def get_data(request):
     global map_info
-    raw_data = BLOCK.objects.all()
+    raw_data = USER.objects.all()
     map_info['blocks'] = []
     for i in raw_data:
         temp_blocks = {
@@ -33,7 +33,7 @@ def get_data(request):
                 }
         }
         map_info['blocks'].append(temp_blocks)
-    row_data = BLOCK.objects.raw(
+    row_data = USER.objects.raw(
         "select observationpivot_block.id,count(observationpivot_note.BLOCKID) as len from observationpivot_block left join observationpivot_note on observationpivot_block.id = observationpivot_note.BLOCKID GROUP BY observationpivot_block.id order by id;")
     map_info['block_list']=[{"id":int(n.id),"len":int(n.len)} for n in row_data]
     map_info['timestamp']=[]
