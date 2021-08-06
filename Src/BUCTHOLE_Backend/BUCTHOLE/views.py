@@ -2,8 +2,8 @@ import json
 from django.http import JsonResponse
 from django.shortcuts import render
 
-from ObservationPivot.models import BLOCK
-from ObservationPivot.models import NOTE
+from AnonymousIsland.models import BLOCK
+from AnonymousIsland.models import NOTE
 
 ###### GLOBAL_VARIABLE
 
